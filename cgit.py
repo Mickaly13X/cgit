@@ -35,14 +35,7 @@ def commit(arg):
     try:
         t = arg[2]
         if t in commands_commit:
-            try:
-                msg = arg[3]
-            except:
-                while(1==1):
-                    msg = input("Please enter your message below\n"+commands_commit[t])
-                    if msg != "":
-                        break
-            os.system('git commit -m "',commands_commit[t] + msg+'"')
+            os.system('git commit -m "'+str(commands_commit[t]) + '" -e')
         
     except:
         os.system("git commit")
