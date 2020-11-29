@@ -40,6 +40,14 @@ def commit(arg):
     except:
         os.system("git commit")
 
+def restore(arg):
+    try:
+        f = arg[2]
+        if f in commands_commit:
+            os.system('git restore '+str(f))
+    except:
+        os.system("git restore")
+
 def main():
     try:
         command = argv[1]
@@ -47,6 +55,8 @@ def main():
         if command == "commit":
             commit(argv)
 
+        if command == "restore":
+            restore(argv)
 
 
 
