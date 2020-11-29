@@ -1,2 +1,2 @@
 # cgit
-Custom git experience
+A custom git experience
